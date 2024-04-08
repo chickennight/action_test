@@ -12,7 +12,7 @@ jobs:
       - name: Checkout manifest repository
         uses: actions/checkout@v4
         with:
-          repository: "PANTS-GOORM/infra"
+          repository: "chickennight/action_test"
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           path: manifest
 
