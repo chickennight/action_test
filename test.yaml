@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pants-fe
+  namespace: argocd
+spec:
+  replicas: 3
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: pants-fe
+  template:
+    metadata:
+      labels:
+        app: pants-fe
+    spec:
+      containers:
+        - name: pants-fe
+          image: chickennight/pants-fe:0.2.1
+          ports:
+            - containerPort: 80
